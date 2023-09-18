@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        body {
+            background-image: url("https://www.pinterest.com/pin/708261478893376650/");
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 300px;
+        }
+        
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+
+    <div class="container">
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" placeholder="Tên đăng nhập" autofocus/>
+                
+
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+
+            </div>
+            <!-- <label><a href="trangchu.html">Đăng nhập</a></label> -->
+            <label><a button type="submit" class="btn" value="Đăng nhập"href="trangchu.html">Đăng nhập</a></label>
+            <!-- <button type="button" class="btn" onclick="dangNhap()">Đăng nhập</button> -->
+        </form>
+    </div>
+    <!-- JavaScript để xử lý đăng nhập -->
+    <!-- // Ở đây, bạn có thể thêm mã JavaScript để gửi thông tin đăng nhập đến máy chủ và kiểm tra chúng
+            // Bạn có thể sử dụng AJAX hoặc bất kỳ phương pháp nào khác để gửi dữ liệu đến máy chủ
+
+            // Trong ví dụ này, chúng tôi chỉ hiển thị thông báo cảnh báo -->
+</body>
+</html>

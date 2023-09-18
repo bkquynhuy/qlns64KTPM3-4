@@ -1,0 +1,61 @@
+/* Thiết lập màu nền và căn giữa trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Thiết lập phần header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Định dạng tiêu đề chính */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Định dạng nội dung container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng mô tả công việc */
+.job-description {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Định dạng các danh sách ul và li */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Định dạng nút nộp đơn ứng tuyển */
+.apply-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #555;
+}

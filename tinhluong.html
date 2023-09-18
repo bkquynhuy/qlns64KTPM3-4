@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Lương Chi Tiết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-container input {
+            width: 100px;
+            text-align: center;
+        }
+        #calculateBtn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bảng Lương Chi Tiết</h1>
+    
+    <div class="input-container">
+        <label for="employeeName">Tên Nhân Viên:</label>
+        <input type="text" id="employeeName">
+        <label for="hourlyRate">Lương giờ (VNĐ):</label>
+        <input type="number" id="hourlyRate" placeholder="0">
+        <label for="hoursWorked">Số giờ làm việc:</label>
+        <input type="number" id="hoursWorked" placeholder="0">
+        <button id="calculateBtn">Tính Lương</button>
+    </div>
+    
+    <table id="salaryTable">
+        <tr>
+            <th>Tên Nhân Viên</th>
+            <th>Lương giờ (VNĐ)</th>
+            <th>Số giờ làm việc</th>
+            <th>Lương</th>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("calculateBtn").addEventListener("click", function() {
+            const employeeName = document.getElementById("employeeName").value;
+            const hourlyRate = parseFloat(document.getElementById("hourlyRate").value);
+            const hoursWorked = parseFloat(document.getElementById("hoursWorked").value);
+            const totalSalary = hourlyRate * hoursWorked;
+
+            if (employeeName && !isNaN(hourlyRate) && !isNaN(hoursWorked)) {
+                const table = document.getElementById("salaryTable");
+                const newRow = table.insertRow(-1);
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+                const cell4 = newRow.insertCell(3);
+
+                cell1.innerHTML = employeeName;
+                cell2.innerHTML = hourlyRate.toLocaleString('vi-VN') + " VNĐ";
+                cell3.innerHTML = hoursWorked;
+                cell4.innerHTML = totalSalary.toLocaleString('vi-VN') + " VNĐ";
+            } else {
+                alert("Vui lòng nhập thông tin hợp lệ cho nhân viên.");
+            }
+        });
+    </script>
+</body>
+</html>

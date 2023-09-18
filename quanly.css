@@ -1,0 +1,88 @@
+/* Thiết lập màu nền và căn giữa trang */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+/* Thiết lập tiêu đề */
+h1 {
+    color: #333;
+}
+
+/* Thiết lập bảng danh sách nhân viên */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Màu nền và căn giữa các input và button trong form */
+form {
+    margin: 20px auto;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Màu nền và màu văn bản cho button */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Định dạng nút xóa */
+td button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #d00;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+td {
+    padding: 10px;
+}
+tr:hover {
+    background-color: #ddd;
+}

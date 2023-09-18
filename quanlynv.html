@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" href="quanly.css">
+</head>
+<body>
+    
+
+    <h1>Thêm nhân viên mới</h1>
+    <form id="employee-form">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label><a for="position">Chức vụ:</label>
+        <input type="text" id="position" name="position" required>
+        <br>
+        <button type="submit">Thêm nhân viên</button>
+    </form>
+    <h1>Danh sách nhân viên</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Chức vụ</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dữ liệu nhân viên sẽ được thêm vào đây -->
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript sẽ được thêm vào đây để quản lý thêm, sửa đổi và xóa nhân viên
+        const employeeForm = document.getElementById('employee-form');
+        const employeeTable = document.querySelector('table tbody');
+
+        employeeForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const position = document.getElementById('position').value;
+
+            // Thêm nhân viên vào bảng
+            const newRow = employeeTable.insertRow();
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${email}</td>
+                <td>${position}</td>
+                <td><button onclick="deleteEmployee(this)">Xóa</button></td>
+            `;
+
+            // Xóa dữ liệu trong form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('position').value = '';
+        });
+
+        // Hàm xóa nhân viên
+        function deleteEmployee(button) {
+            const row = button.closest('tr');
+            row.remove();
+        }
+    </script>
+</body>
+</html>
